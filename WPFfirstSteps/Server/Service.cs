@@ -10,7 +10,7 @@ namespace Server
     {
         public void Say(string text)
         {
-            Console.WriteLine($"Send messege {text}");
+            Console.WriteLine($"Send message {text}");
         }
     }
 }
