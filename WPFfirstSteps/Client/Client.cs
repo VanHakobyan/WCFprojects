@@ -17,7 +17,7 @@ namespace Client
             EndpointAddress endpoint = new EndpointAddress(adress);
             ChannelFactory<IContract> factory = new ChannelFactory<IContract>(binding,endpoint);
             IContract chanel = factory.CreateChannel();//proxy
-            chanel.Say("Firs Text");
+            chanel.Say("First Text");
             Console.ReadKey();
 
 
