@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClientWCF
 {
-    class Program
+    class Client
     {
         static void Main(string[] args)
         {
