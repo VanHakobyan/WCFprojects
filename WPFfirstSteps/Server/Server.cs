@@ -8,7 +8,7 @@ namespace Server
         static void Main(string[] args)
         {
             Console.Title = "Server";
-            Uri adress = new Uri("http://localhost:4000//IContract");
+            Uri adress = new Uri("http://localhost:8000//IContract");
             BasicHttpBinding binding = new BasicHttpBinding();
             Type contract = typeof(IContract);
             ServiceHost host = new ServiceHost(typeof(Service));

@@ -6,6 +6,6 @@ namespace Server
     interface IContract
     {
         [OperationContract]
-        void Say(string text);
+        void Say();
     }
 }

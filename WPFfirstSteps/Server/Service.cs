@@ -4,9 +4,9 @@ namespace Server
 {
     class Service : IContract
     {
-        public void Say(string text)
+        public void Say()
         {
-            Console.WriteLine($"Send message {text}");
+            Console.WriteLine($"Send message");
         }
     }
 }
