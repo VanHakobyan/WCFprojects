@@ -19,11 +19,6 @@ using System.Net.Http.Formatting;
 
 namespace WPFsimple
 {
-    public class Person
-    {
-        public string Name { get; set; }
-        public int Age { get; set; }
-    }
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -36,12 +31,11 @@ namespace WPFsimple
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            Person p = new Person() { Name = "Satenik", Age = 20 };
+
             HttpClient client = new HttpClient();
 
-            HttpResponseMessage response = client.PostAsync(@"http://http://localhost:51001/api/main", p, new JsonMediaTypeFormatter()).Result;
+            HttpResponseMessage response = client.GetAsync(@"http://localhost:55676/api/main").Result;
             string message = response.Content.ReadAsStringAsync().Result;
-
             JavaScriptSerializer jss = new JavaScriptSerializer();
 
             string content = jss.Deserialize<string>(message);

@@ -4,22 +4,23 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using WebApp.ServiceReference1;
 
 namespace WebApp.Controllers
 {
     public class MainController : ApiController
     {
-        // GET: api/Main
+       
         Service1Client WCFclient = new Service1Client();
-        GET: api/Main
+        //GET: api/Main
         public string Get()
         {
-            CompositeType Mytype = WCFclient.GetDataUsingDataContractAsync();
+           
             string result = WCFclient.GetDataAsync(5).Result;
         
             return result;
         }
-        GET: api/Main/5
+        //GET: api/Main/5
         public string Get(int id)
         {
             return "value";
