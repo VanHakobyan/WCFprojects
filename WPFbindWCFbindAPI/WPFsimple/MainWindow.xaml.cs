@@ -34,7 +34,7 @@ namespace WPFsimple
 
             HttpClient client = new HttpClient();
 
-            HttpResponseMessage response = client.GetAsync(@"http://localhost:55676/api/main").Result;
+            HttpResponseMessage response = client.GetAsync(@"http://localhost:51001/api/main").Result;
             string message = response.Content.ReadAsStringAsync().Result;
             JavaScriptSerializer jss = new JavaScriptSerializer();
 
