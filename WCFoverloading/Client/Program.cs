@@ -24,19 +24,19 @@ namespace Client
         {
             Console.Title = "CLIENT";
 
-            //IInterface proxy = ChannelFactory<IInterface>.CreateChannel(
-            //    new BasicHttpBinding(), new EndpointAddress("http://localhost:7787/IInterface"));
-            //IInterface chanel = proxy.Add()
-            ChannelFactory<IInterface> proxy = new ChannelFactory<IInterface>(new BasicHttpBinding(),
-                new EndpointAddress("http://localhost:7787/IInterface"));
-            IInterface chanel = proxy.CreateChannel();
-            using (chanel as IDisposable)
+            IInterface proxy = ChannelFactory<IInterface>.CreateChannel(
+                new BasicHttpBinding(), new EndpointAddress("http://localhost:7787/IInterface"));
+            //   IInterface chanel = chanel.Add()
+            //ChannelFactory<IInterface> proxy = new ChannelFactory<IInterface>(new BasicHttpBinding(),
+            //    new EndpointAddress("http://localhost:7787/IInterface"));
+            //IInterface chanel = proxy.CreateChannel();
+            using (proxy as IDisposable)
             {
-                int i = chanel.Add(22, 63);
+                int i = proxy.Add(2, 3);
                 Console.WriteLine(i);
 
-                double d = chanel.Add(2.7, 9.3);
-                Console.WriteLine(d);
+                //double d = proxy.Add(2.7, 9.3);
+                //Console.WriteLine(d);
             }
 
             // Задержка.

@@ -2,13 +2,16 @@
 using System.ServiceModel;
 namespace WCFoverloading
 {
+
+    
+
     [ServiceContract]
     interface IInterface
     {
-        [OperationContract(Name = "addInt")]
+        [OperationContract(Name = "AddInt")]
         int Add(int x, int y);
 
-        [OperationContract(Name = "addDouble")]
+        [OperationContract(Name = "AddDouble")]
         double Add(double x, double y);
 
     }
