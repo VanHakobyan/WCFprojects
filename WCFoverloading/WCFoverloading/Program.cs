@@ -12,7 +12,7 @@ namespace WCFoverloading
         static void Main(string[] args)
         {
             Console.Title = "server";
-            ServiceHost host = new ServiceHost(typeof(Service), new Uri(@"http://localhost"));
+            ServiceHost host = new ServiceHost(typeof(Service), new Uri("http://localhost"));
             host.AddServiceEndpoint(typeof(IInterface), new BasicHttpBinding(), "");
             host.Open();
 
