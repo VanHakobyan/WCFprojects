@@ -16,13 +16,13 @@ namespace WCFoverloading
     {
         public int Add(int x, int y)
         {
-            Console.WriteLine(OperationContext.Current.RequestContext.RequestMessage);
+            Console.WriteLine(OperationContext.Current.RequestContext.RequestMessage.ToString());
             return x + y;
         }
 
         public double Add(double x, double y)
         {
-            Console.WriteLine(OperationContext.Current.RequestContext.RequestMessage);
+            Console.WriteLine(OperationContext.Current.RequestContext.RequestMessage.ToString());
             return x + y;
         }
     }
