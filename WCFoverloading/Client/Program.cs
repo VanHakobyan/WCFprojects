@@ -22,6 +22,7 @@ namespace Client
     {
         static void Main()
         {
+
             Console.Title = "CLIENT";
 
             IInterface proxy = ChannelFactory<IInterface>.CreateChannel(
